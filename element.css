@@ -1,0 +1,226 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+}
+
+a{
+text-decoration: none;
+display: inline-block;
+}
+li{
+list-style: none;
+}
+
+.header{
+    height: 80px;
+    display: flex;
+    justify-content: space-around;
+    align-items:center ;
+    padding: 0 5.4rem;
+    position: relative;
+    background-color: rgb(238, 130, 130);
+}
+.logo{
+    font-size: 20px;
+    font-weight: bold;
+    color: darkblue;
+}
+.www{
+    width: 70px;
+    height: 70px;
+    margin-left: 10px;
+}
+
+.navbar{
+display: flex;
+align-items: center;
+}
+
+.navbar-list{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    font-size: 20px;
+}
+.navbar-link{
+    color: black;
+}
+body{
+    background-color: rgb(223, 233, 136);
+}
+
+.navbar-btn{
+    padding: 0.4rem 1.5rem;
+    background-color: rgb(120, 168, 164);
+    border: 1px solid blue;
+    border-radius: 5rem;
+    transition: all 0.3s ease-in-out;
+}
+
+.navbar-list .navbar-link:hover,
+.navbar-list .navbar-link:active {
+    color: blue;
+}
+
+.navbar-btn:hover,
+.navbar-btn:active{
+    background-color: rgb(252, 4, 4);
+}
+.mobile-nav-icon{
+    font-size: 2rem;
+    color: black;
+}
+
+.mobile-navbar-btn{
+    display: none;
+}
+
+.watch{
+    font-size: 20px;
+    padding: 10px 32px;
+    border-radius: 10rem;
+    background-color: red;
+    color: white;
+    transition: all 0.2s linear;
+}
+.reffer{
+    font-size: 20px;
+    padding: 10px 32px;
+    border-radius: 10rem;
+    background-color: rgb(130, 56, 248);
+    color: white;
+    transition: all 0.2s linear;
+}
+.telegram{
+    font-size: 20px;
+    padding: 10px 32px;
+    border-radius: 10rem;
+    background-color: blue;
+    color: white;
+    transition: all 0.2s linear;
+}
+.balance{
+    font-size: 20px;
+    padding: 10px 32px;
+    border-radius: 10rem;
+    background-color: rgb(5, 5, 5);
+    color: white;
+    transition: all 0.2s linear;
+}
+.tasksubmit{
+    font-size: 20px;
+    padding: 10px 32px;
+    border-radius: 10rem;
+    background-color: rgb(5, 5, 5);
+    color: white;
+    transition: all 0.2s linear;
+}
+.balance:hover,
+.balance:active{
+    transform: scale(1.05);
+}
+.tasksubmit:hover,
+.tasksubmit:active{
+    transform: scale(1.05);
+}
+.watch:hover,
+.watch:active{
+    transform: scale(1.05);
+}
+.reffer:hover,
+.reffer:active{
+    transform: scale(1.05);
+}
+.telegram:hover,
+.telegram:active{
+    transform: scale(1.05);
+}
+.hero-data{
+    margin: 0 50px;
+    align-items: left;
+    top: 10%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+@media (max-width:740px){
+   .navbar{
+       position: absolute;
+       top: 0;
+       left: 0;
+       width: 100%;
+       height: 50vh;
+       background-color: black;
+
+       display: flex;
+       justify-content: center;
+       align-items: center;
+
+       transform: translateX(100%);
+       transition: all 0.3s linear;
+
+       opacity: 1;
+       visibility: visible;
+       pointer-events: none;
+   }
+   
+   .navbar .navbar-list{
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+       align-items: center;
+   }
+   .navbar .navbar-link{
+       color: white;
+   }
+   .mobile-navbar-btn{
+       display: block;
+   }
+
+   .active .navbar{
+       opacity: 1;
+       visibility: visible;
+       pointer-events: auto;
+       transform: translateX(0);
+   }
+
+   .active .mobile-navbar-btn .mobile-nav-icon{
+       display: block;
+       color: white;
+   }
+
+   .hero-data{
+       display: flex;
+       flex-direction: column;
+       gap: 20px;
+       margin: 20px 0;
+       margin-right: 320px;
+       margin-left: 25px;
+   }
+}
+
+@media (max-width:550px){
+    .hero-data{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        margin: 20px 0;
+       margin-right: 190px;
+       margin-left: 25px;
+    }
+}
+
+@media (max-width:415px){
+    .hero-data{
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        margin: 10px 0;
+        margin-right: 125px;
+        margin-left: 25px;
+    }
+}
